@@ -24,7 +24,9 @@ public class Main {
         hashmap.put(person4.getFirstName(), person4.getFamily());
         hashmap.put(person5.getFirstName(), person5.getFamily());
 
-        someMetod.isUnique(hashmap);
+
+        System.out.println("Инструкция: true - нет совпадений фамилии, false - есть совпадение фамилии:");
+        System.out.println(someMetod.isUnique(hashmap));
 
 
     }

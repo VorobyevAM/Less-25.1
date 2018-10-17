@@ -10,7 +10,25 @@ public class SomeMetod {
 
     public boolean isUnique(Map<String, String> map) {
 
-        boolean isUnique = true;
+       /* for (String str:map.values()) {
+
+            int i =0;
+
+            for (String str1:map.values()) {
+                if (str.equals(str1) && ++i>1){
+                    return false;
+                }
+            }
+        }
+        return true;*/
+
+        return map.values().stream().distinct().count()==map.size();
+
+        //map.values().stream().filter(s -> s.length() > 9).count();
+
+
+
+        /*boolean isUnique = true;
 
         if (map.isEmpty()) {//Проверка на пустая/не пустая коллекция
         } else {
@@ -43,8 +61,8 @@ public class SomeMetod {
             System.out.println("В значениях не уникальные элементы");
         }else {
             System.out.println("Значения уникальны, либо неуказано ничего");
-        }
+        }*/
 
-        return isUnique;
+        //return isUnique;
     }
 }
